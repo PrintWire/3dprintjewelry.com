@@ -1,0 +1,214 @@
+baseURL = "https://3dprintjewelry.com/"
+languageCode = "en-us"
+title = "3D Print Jewelry"
+theme = "printwire"
+
+[params]
+tagline       = "From CAD to Carat — Precision Jewelry Printing."
+description   = "3D Print Jewelry — custom jewelry 3D printing from CAD concept to finished piece. SLA castable wax models for investment casting and direct SLM production in 18K gold and sterling silver."
+keywords      = "3D printed jewelry, jewelry 3D printing, SLA wax casting, direct metal printing, gold 3D printing, silver printing, lost wax casting, CAD jewelry, precious metal AM"
+logoEmoji     = "💎"
+contactEmail  = "maxdavisgroup@gmail.com"
+ogImage       = "https://images.unsplash.com/photo-1614595737476-42487331b8a1?w=1200&q=80"
+footerServicesLabel = "Services"
+
+colorPrimary      = "#d4af37"
+colorPrimaryDark  = "#b8942e"
+colorPrimaryLight = "#e8c84a"
+colorBgDark       = "#0f0520"
+colorBgSection    = "#130828"
+colorBgCard       = "#1a0f35"
+colorBgCardHover  = "#211444"
+colorBorder       = "rgba(212,175,55,0.20)"
+colorBorderLight  = "rgba(212,175,55,0.09)"
+
+fontPrimary   = "Cinzel"
+fontSecondary = "Cormorant+Garamond"
+
+pubmedQuery        = "additive+manufacturing+jewelry+precious+metal+printing"
+pubmedFallback     = "metal+3D+printing+jewelry"
+newsFallbackImages = [
+  "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?w=600&q=80",
+  "https://images.unsplash.com/photo-1602173574767-37ac01994b2a?w=600&q=80",
+  "https://images.unsplash.com/photo-1506630448388-4e683c67ddb0?w=600&q=80",
+]
+
+heroEyebrow  = "Jewelry Additive Manufacturing"
+heroTitle    = "3D Print <em>Jewelry</em>"
+heroSubtitle = "Custom jewelry 3D printing from CAD concept to finished piece. SLA castable wax models for investment casting and direct SLM production in 18K gold and sterling silver."
+heroCta1Text = "Explore Services"
+heroCta1URL  = "/services/"
+heroCta2Text = "Get a Quote"
+heroCta2URL  = "/contact/"
+heroImage    = "https://images.unsplash.com/photo-1614595737476-42487331b8a1?w=1200&q=80"
+
+newsSectionTitle    = "Latest in Precious Metal Printing"
+newsSectionSubtitle = "Research, technology news, and market developments from the jewelry additive manufacturing field."
+
+overviewLabel   = "Production Options"
+overviewTitle   = "Jewelry Production Materials"
+overviewText    = "Two routes to a finished jewelry piece — wax-and-cast for maximum material choice, or direct metal print for maximum geometric complexity. Both routes start from your CAD file."
+overviewText2   = "Castable resin with zero-ash burnout. 18K yellow, white, and rose gold via direct SLM. Sterling silver 925, fine silver 999, and platinum 950 on specification."
+overviewImage   = "https://images.unsplash.com/photo-1614595737476-42487331b8a1?w=800&q=80"
+overviewBtnText = "View Services"
+overviewBtnURL  = "/services/"
+
+applicationsLabel = "Jewelry Types"
+applicationsTitle = "What We Produce"
+
+servicesLabel    = "What We Offer"
+servicesTitle    = "Jewelry Printing Services"
+servicesSubtitle = "From castable wax to finished precious metal — every route to a printed jewelry piece, under one roof."
+
+clusterLabel = "PrintWire Network"
+clusterTitle = "Related 3D Printing Resources"
+
+newsletterTitle = "Jewelry Tech Updates"
+newsletterText  = "New printing techniques, precious metal AM research, and industry news — delivered monthly."
+
+ctaTitle   = "Bring Your Design to Life"
+ctaText    = "From a sketch on paper to a hallmarked piece in precious metal — we handle every step. No minimum order."
+ctaImage   = "https://images.unsplash.com/photo-1573408301185-9519f94a7c2a?w=1200&q=80"
+ctaBtnText = "Start Your Project"
+ctaBtnURL  = "/contact/"
+
+# ── Array tables ──────────────────────────────────────────────────────
+
+[[params.stats]]
+count  = 50
+suffix = "µm"
+label  = "SLA Resolution"
+
+[[params.stats]]
+count  = 14
+suffix = " days"
+label  = "Design to Delivery"
+
+[[params.stats]]
+count  = 3
+suffix = "B+"
+label  = "Market by 2030 (USD)"
+
+[[params.stats]]
+count  = 0
+suffix = "No MOQ"
+label  = "Minimum Order"
+
+[[params.applications]]
+title       = "Engagement & Bridal"
+description = "Bespoke engagement rings and wedding bands with complex stone settings, pavé work, and custom engraving — impossible by hand, perfect by print."
+image       = "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=800&q=80"
+
+[[params.applications]]
+title       = "Fashion & Statement Pieces"
+description = "Architectural forms, interlocking geometries, and lattice structures for contemporary fashion jewelry that pushes beyond traditional casting limits."
+image       = "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=800&q=80"
+
+[[params.applications]]
+title       = "Fine & Precious Metal"
+description = "18K gold, platinum, and sterling silver printed directly via SLM. Skip casting entirely for complex hollow forms and internal channel designs."
+image       = "https://images.unsplash.com/photo-1601121141461-9d6647bef0a1?w=800&q=80"
+
+[[params.applications]]
+title       = "Commercial Production"
+description = "Consistent castable wax patterns at production volumes. Same-geometry repeatability across hundreds of pieces — ideal for collections and catalog runs."
+image       = "https://images.unsplash.com/photo-1692593805406-3ee865740c98?w=800&q=80"
+
+[[params.servicesPreview]]
+icon        = "🕯️"
+title       = "Castable Wax Models"
+description = "SLA-printed castable resin patterns with clean burnout. Shrinkage compensation built in. Compatible with all standard casting houses."
+
+[[params.servicesPreview]]
+icon        = "⚙️"
+title       = "Direct Metal Printing"
+description = "18K gold and sterling silver parts printed directly via SLM. Complex hollow and lattice geometries impossible by casting."
+
+[[params.servicesPreview]]
+icon        = "💎"
+title       = "End-to-End Production"
+description = "From CAD design through casting, stone-setting, polishing, and hallmarking. Single source for complete jewelry production."
+
+[[params.servicesPreview]]
+icon        = "✏️"
+title       = "CAD Design Service"
+description = "From sketch or concept to production-ready file. Parametric design for easy size and material variation across a collection."
+
+[[params.services]]
+name        = "Castable Wax Models"
+description = "SLA-printed castable resin patterns with zero-ash burnout at 750°C. Exact shrinkage compensation built in. Works with your caster or our in-house casting service."
+icon        = "🕯️"
+image       = "https://images.unsplash.com/photo-1701964619775-b18422290cf9?w=800&q=80"
+
+[[params.services]]
+name        = "Direct Metal Printing"
+description = "18K yellow, white, and rose gold; sterling silver 925; platinum 950 — printed directly via SLM. Surface finish Ra 3–5µm as-printed, mirror polish on request."
+icon        = "⚙️"
+image       = "https://images.unsplash.com/photo-1652888510609-ed2d2ad64d6b?w=800&q=80"
+
+[[params.services]]
+name        = "End-to-End Production"
+description = "Full-service from CAD through casting or direct print to setting, stone-setting, polishing, and hallmarking. Prototype to production volumes from one source."
+icon        = "💎"
+image       = "https://images.unsplash.com/photo-1692593805406-3ee865740c98?w=800&q=80"
+
+[[params.services]]
+name        = "CAD Design Service"
+description = "Concept sketch to production-ready CAD file. Parametric models for easy resizing and material variation. Export to STL, STEP, or Rhino format."
+icon        = "✏️"
+image       = "https://images.unsplash.com/photo-1614595737476-42487331b8a1?w=1200&q=80"
+
+[[params.clusterLinks]]
+name        = "dmls3d.com"
+url         = "https://dmls3d.com"
+description = "Metal 3D printing & DMLS"
+
+[[params.clusterLinks]]
+name        = "metalpowder.co"
+url         = "https://metalpowder.co"
+description = "Metal powder for AM"
+
+[[params.clusterLinks]]
+name        = "3dprinttitanium.com"
+url         = "https://3dprinttitanium.com"
+description = "Titanium additive manufacturing"
+
+[[params.clusterLinks]]
+name        = "sendcutship.com"
+url         = "https://sendcutship.com"
+description = "Custom manufacturing services"
+
+[[params.clusterLinks]]
+name        = "3dprintarchitecture.com"
+url         = "https://3dprintarchitecture.com"
+description = "Architecture & design printing"
+
+[[menu.main]]
+name   = "Home"
+url    = "/"
+weight = 1
+
+[[menu.main]]
+name   = "About"
+url    = "/about/"
+weight = 2
+
+[[menu.main]]
+name   = "Articles"
+url    = "/articles/"
+weight = 3
+
+[[menu.main]]
+name   = "Services"
+url    = "/services/"
+weight = 4
+
+[[menu.main]]
+name   = "Contact"
+url    = "/contact/"
+weight = 5
+
+[[menu.main]]
+name   = "Advertise"
+url    = "/advertise/"
+weight = 6
