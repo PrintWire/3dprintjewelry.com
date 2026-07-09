@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Advertise with 3D Print Jewelry — reach engineers specifying printed hardware for fine-jewelry additive manufacturing.">
+    <meta property="og:title" content="Advertise — 3D Print Jewelry">
+    <meta property="og:description" content="Advertise with 3D Print Jewelry — reach engineers specifying printed hardware for fine-jewelry additive manufacturing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/25_diamond_luxury.png">
+    <title>Advertise — 3D Print Jewelry</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/editorial.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+
+<header class="ed-header">
+  <div class="ed-header-inner">
+    <a href="/" class="ed-logo">3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">JEWELRY</span></a>
+    <button class="ed-nav-toggle" aria-label="Menu" onclick="document.querySelector('.ed-nav').classList.toggle('open')">&#9776;</button>
+    <nav class="ed-nav">
+      <a href="/">News</a>
+      <a href="/articles/">Research</a>
+      <a href="/#suppliers">Suppliers</a>
+      <a href="/#suppliers">Materials</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <button class="ed-theme-toggle" id="themeToggle" aria-label="Toggle light/dark mode">&#9790;</button>
+  </div>
+</header>
+
+<main>
+  <nav class="ed-breadcrumbs"><a href="/">Home</a> / <span>Advertise</span></nav>
+  <div class="ed-content-narrow">
+    <section class="ed-section" style="text-align:center;padding-top:3rem;">
+      <h1>Advertise with 3D Print Jewelry</h1>
+      <p style="max-width:640px;margin:1rem auto 0;">Reach <strong>engineers, integrators, and builders</strong> actively specifying printed hardware for fine-jewelry additive manufacturing. Our audience arrives with real projects and purchasing authority.</p>
+    </section>
+    <section class="ed-stats">
+      <div class="ed-stat"><div class="ed-stat-value">194</div><div class="ed-stat-label">Niche Domains</div></div>
+      <div class="ed-stat"><div class="ed-stat-value">13</div><div class="ed-stat-label">Flagship Sites</div></div>
+      <div class="ed-stat"><div class="ed-stat-value">100%</div><div class="ed-stat-label">Organic Search Traffic</div></div>
+      <div class="ed-stat"><div class="ed-stat-value">B2B</div><div class="ed-stat-label">Professional Audience</div></div>
+    </section>
+    <section class="ed-section">
+      <span class="ed-section-label">WHO VISITS</span>
+      <div class="ed-grid-3">        <div class="ed-content-card"><h3>&#9670; Jewelers &amp; Designers</h3><p>Designers specifying printed patterns, settings, and direct-metal pieces for new collections.</p></div>
+        <div class="ed-content-card"><h3>&#9672; Casters &amp; Finishers</h3><p>Casting houses and finishing studios sourcing precious-metal AM and pattern work.</p></div>
+        <div class="ed-content-card"><h3>&#10022; Brands &amp; Ateliers</h3><p>Jewelry brands evaluating additive manufacturing to cut lead time and unlock bespoke geometry.</p></div></div>
+    </section>
+    <section class="ed-cta-banner">
+      <h2>Reach the 3D Print Jewelry Audience</h2>
+      <p>Sponsorships, directory listings, and media partnerships. Tell us your goals.</p>
+      <a href="/contact.html">Get In Touch</a>
+    </section>
+  </div>
+</main>
+<footer class="ed-footer">
+  <div class="ed-footer-inner">
+    <div class="ed-footer-brand">
+      <div class="ed-logo" style="font-size:1.3rem;margin-bottom:0.5rem;">3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">JEWELRY</span></div>
+      <p>Additive manufacturing for fine jewelry — direct precious-metal printing, lost-wax patterns, gemstone settings, and bespoke pieces. News, research, and a directory connecting jewelers to suppliers. Part of the PrintWire network.</p>
+    </div>
+    <div><h4>Sections</h4><ul><li><a href="/">News</a></li><li><a href="/articles/">Research</a></li><li><a href="/#suppliers">Suppliers</a></li><li><a href="/about.html">About</a></li></ul></div>
+    <div><h4>Company</h4><ul><li><a href="/about.html">About</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/advertise.html">Advertise</a></li></ul></div>
+    <div><h4>Coverage</h4><ul><li><a href="#">Fine Jewelry</a></li><li><a href="#">Casting</a></li><li><a href="#">Gemstone Settings</a></li><li><a href="/advertise.html">Advertise</a></li></ul></div>
+  </div>
+  <div class="ed-footer-bottom">
+    <span>&copy; 2026 3D Print Jewelry. Part of the <a href="https://3dprint.space" style="color:var(--accent);">PrintWire</a> network.</span>
+    <span><a href="#">Privacy</a><a href="#">Terms</a></span>
+  </div>
+</footer><script>
+(function() {
+  var btn = document.getElementById('themeToggle');
+  var root = document.documentElement;
+  function setTheme(t) { root.setAttribute('data-theme', t); localStorage.setItem('ed-theme', t); btn.innerHTML = t === 'dark' ? '&#9790;' : '&#9728;'; }
+  var s = localStorage.getItem('ed-theme');
+  setTheme(s || 'light');
+  btn.addEventListener('click', function() { setTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark'); });
+})();
+</script>
+</body>
+</html>

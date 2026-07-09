@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="The latest research, technology reviews, and industry news from the jewelry additive manufacturing and precious metal printing field.">
-  <meta property="og:title" content="Jewelry 3D Printing Research &amp; News | 3D Print Jewelry">
-  <meta property="og:description" content="The latest research, technology reviews, and industry news from the jewelry additive manufacturing and precious metal printing field.">
+  <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}">
+  <meta property="og:description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
   <meta property="og:type" content="website">
-  <title>Jewelry 3D Printing Research &amp; News | 3D Print Jewelry</title>
+  <title>{{ .Title }} | {{ .Site.Title }}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -29,17 +29,17 @@
   .article-content img { max-width: 100%; border-radius: var(--radius); margin: 1.5rem 0; }
   </style>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  
-  <meta property="og:image" content="https://3dprintjewelry.com/images/30_bespoke_masterpiece.png">
+  {{ $og := ((.Params.image | default .Site.Params.ogImage) | absURL) }}
+  <meta property="og:image" content="{{ $og }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://3dprintjewelry.com/images/30_bespoke_masterpiece.png">
+  <meta name="twitter:image" content="{{ $og }}">
 </head>
 <body>
 
 <header class="ed-header">
   <div class="ed-header-inner">
     <a href="/" class="ed-logo">
-      3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">JEWELRY</span>
+      {{ .Site.Params.logoHtml | default .Site.Params.siteName | safeHTML }}
     </a>
     <button class="ed-nav-toggle" aria-label="Menu" onclick="document.querySelector('.ed-nav').classList.toggle('open')">&#9776;</button>
     <nav class="ed-nav">
@@ -55,42 +55,18 @@
 </header>
 
 <div class="ed-breadcrumbs">
-  <a href="/">Home</a> <span>/</span> Articles
+  <a href="/">Home</a> <span>/</span> {{ block "breadcrumb" . }}Articles{{ end }}
 </div>
 
 <main>
-  
-<div class="ed-content">
-  <div class="ed-section">
-    <div class="ed-section-label">
-      All Articles
-      <a href="/">Back to News &rarr;</a>
-    </div>
-
-    
-    <div class="ed-card-grid">
-      
-      <article class="ed-card">
-        <div class="ed-card-body">
-          
-          <div class="ed-card-meta">Jun 29, 2026</div>
-          <h3><a href="/articles/3d-printed-jewelry-production-manufacturing/">3D Printed Jewelry Production Manufacturing at Scale: Meeting Luxury Demand</a></h3>
-          <p class="ed-card-excerpt"><p>For decades, scaling a jewelry line meant one of two difficult choices: invest in expensive dies and rubber molds, or accept the inconsistency of entirely …</p></p>
-        </div>
-      </article>
-      
-    </div>
-    
-  </div>
-</div>
-
+  {{ block "main" . }}{{ end }}
 </main>
 
 <footer class="ed-footer">
   <div class="ed-footer-inner">
     <div class="ed-footer-brand">
-      <div class="ed-logo">3D&nbsp;PRINT&nbsp;<span class="ed-logo-accent">JEWELRY</span></div>
-      <p>3D Print Jewelry: additive manufacturing for fine jewelry — direct precious-metal printing, lost-wax patterns, gemstone settings, and bespoke pieces. News, research, and a supplier directory. Part of the PrintWire network.</p>
+      <div class="ed-logo">{{ .Site.Params.logoHtml | default .Site.Params.siteName | safeHTML }}</div>
+      <p>{{ .Site.Params.description }} Part of the PrintWire network.</p>
     </div>
     <div>
       <h4>Navigation</h4>
@@ -121,7 +97,7 @@
     </div>
   </div>
   <div class="ed-footer-bottom">
-    <div>&copy; 2026 3D Print Jewelry. Part of the <a href="https://3dprint.space">PrintWire</a> network.</div>
+    <div>&copy; 2026 {{ .Site.Params.siteName }}. Part of the <a href="https://3dprint.space">PrintWire</a> network.</div>
     <div>
       <a href="#">Privacy</a>
       <a href="#">Terms</a>
@@ -130,7 +106,7 @@
 </footer>
 
 <script>
-
+// Theme toggle — light default
 (function() {
   var btn = document.getElementById('themeToggle');
   var root = document.documentElement;
