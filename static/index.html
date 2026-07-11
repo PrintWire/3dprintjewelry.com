@@ -83,36 +83,10 @@
 
     <div class="ed-section-label">
       Analysis &amp; Deep Dives
-      <a href="#">View All &rarr;</a>
+      <a href="/articles/">View All &rarr;</a>
     </div>
-    <div class="ed-list">
-      <article class="ed-list-item">
-        <img src="images/02_castable_resin.png" alt="Direct gold-printed piece">
-        <div>
-          <span class="ed-badge">Gold</span>
-          <div class="ed-card-meta">June 24, 2026 · 9 min read</div>
-          <h3><a href="#">Direct Gold Printing Skips the Casting Step Entirely</a></h3>
-          <p class="ed-card-excerpt">DMLS in precious alloys is producing finished pieces straight from the build plate — reaching hallmark-grade density without a wax pattern or a caster.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/03_direct_metal.png" alt="Resin lost-wax pattern">
-        <div>
-          <span class="ed-badge">Casting</span>
-          <div class="ed-card-meta">June 20, 2026 · 7 min read</div>
-          <h3><a href="#">Resin Patterns Cut Lost-Wax Lead Time to Hours</a></h3>
-          <p class="ed-card-excerpt">High-resolution DLP patterns are replacing hand-carved waxes — collapsing weeks of model-making into an overnight print, then cast the way jewelers already know.</p>
-        </div>
-      </article>
-      <article class="ed-list-item">
-        <img src="images/04_gemstone_setting.png" alt="Printed gemstone setting">
-        <div>
-          <span class="ed-badge">Gemstone</span>
-          <div class="ed-card-meta">June 18, 2026 · 10 min read</div>
-          <h3><a href="#">Printed Settings Hold Stones the Cutter Meant to Show</a></h3>
-          <p class="ed-card-excerpt">Parametric prong and pavé settings printed to the exact stone are opening geometry hand-setting struggles to reach — then finished and polished by hand.</p>
-        </div>
-      </article>
+    <div class="ed-list" id="pwDeepDives">
+      <div style="padding:1.5rem;color:var(--text-faint);">Loading analysis…</div>
     </div>
 
     <div class="ed-section-label">
@@ -422,6 +396,31 @@ document.querySelector('.ed-nav-toggle')?.addEventListener('click', () => {
       ? top.map(card).join('')
       : '<div style="grid-column:1/-1;text-align:center;padding:2rem;color:var(--text-faint);">Unable to load news.</div>';
   }
+})();
+
+// -- Analysis & Deep Dives: PrintWire catalog in list format --
+(function(){
+  var box = document.getElementById('pwDeepDives');
+  if (!box) return;
+  function esc(s){var d=document.createElement('div');d.appendChild(document.createTextNode(s==null?'':s));return d.innerHTML;}
+  var empty = '<div style="padding:1.5rem;color:var(--text-faint);">In-depth analysis and deep dives are on the way — check back soon.</div>';
+  fetch('network.json',{cache:'no-store'})
+    .then(function(r){ return r.ok ? r.json() : []; })
+    .then(function(items){
+      items = (items || []).slice();
+      items.sort(function(a,b){ return (b.iso||'').localeCompare(a.iso||''); });
+      if (!items.length){ box.innerHTML = empty; return; }
+      box.innerHTML = items.slice(0,8).map(function(a){
+        var img = a.img ? '<img src="'+esc(a.img)+'" alt="" loading="lazy">' : '';
+        var meta = esc(a.date||'') + (a.origin ? ' · '+esc(a.origin) : '');
+        return '<article class="ed-list-item">'+img+'<div>'+
+          '<div class="ed-card-meta">'+meta+'</div>'+
+          '<h3><a href="'+esc(a.url)+'">'+esc(a.title)+'</a></h3>'+
+          '<p class="ed-card-excerpt">'+esc(a.summary||'')+'</p>'+
+          '</div></article>';
+      }).join('');
+    })
+    .catch(function(){ box.innerHTML = empty; });
 })();
 </script>
 </body>
